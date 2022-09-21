@@ -1,0 +1,1 @@
+# Corrupt TS API Definitions
