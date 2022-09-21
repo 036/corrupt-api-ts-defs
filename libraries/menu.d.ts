@@ -104,6 +104,7 @@ declare class menu {
     spacer(key: string, displayName: string): menuElement
     hide( value: boolean ) : void
     isopen() : boolean
+    isMainMenuOpen(): boolean
 }
 
 declare global {
