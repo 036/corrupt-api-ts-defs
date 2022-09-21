@@ -1,17 +1,64 @@
 
 declare class menu {
-    /** @noSelf **/
+    
+    /**
+     * 
+     * @param key 
+     * @param displayName 
+     * @returns {menu} - The menu instance
+     */
     create(key: string, displayName: string): menu
+    
     /** @noSelf **/
     delete(key: string): void
+
+    /**
+     * 
+     * @param key 
+     * @param displayName 
+     * @returns {menu} - The menu instance
+     */
     header(key: string, displayName: string): menu
+
     hide(value: boolean): void
+
+    /**
+     * 
+     * @param key 
+     * @param displayName 
+     * @param defaultValue 
+     * @param callback - Called when value is changed
+     * @returns {menuElement} - Element instance
+     */
     boolean(
         key: string,
         displayName: string,
         defaultValue: boolean,
         callback?: ((menuElementObj: menuElement, value: boolean) => void)
     ): menuElement
+
+    /**
+     * 
+     * @param key 
+     * @param displayName 
+     * @param callback - Called when button is pressed
+     */
+    button(
+        key: string,
+        displayName: string,
+        callback?: ((menuElementObj: menuElement) => void)
+    ): menuElement
+
+    /**
+     * 
+     * @param key 
+     * @param displayName 
+     * @param defaultValue 
+     * @param minValue 
+     * @param maxValue 
+     * @param step 
+     * @param callback - Called when value is changed
+     */
     slider(
         key: string,
         displayName: string,
@@ -21,6 +68,8 @@ declare class menu {
         step: number,
         callback?: ((menuElementObj: menuElement, value: number) => void)
     ): menuElement
+
+
     sliderDecimal(
         key: string,
         displayName: string,

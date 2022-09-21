@@ -1,11 +1,34 @@
 
 declare class graphics {
-/** @noSelf **/
+    
+    /**
+     * 
+     * @param red 
+     * @param green 
+     * @param blue 
+     * @param alpha 
+     * @returns {number} - Color
+     */
     rgba( red: number, green: number, blue: number, alpha: number ): number
-    /** @noSelf **/
+
+    /**
+     * 
+     * @param alpha 
+     * @param red 
+     * @param green 
+     * @param blue 
+     * @returns {number} - Color
+     */
     argb( alpha: number, red: number, green: number, blue: number ): number
-    /** @noSelf **/
+    
+    /**
+     * 
+     * @param text
+     * @param fontSize
+     * @returns {vec2} - Size
+     */
     textSize( text: string, fontSize: number ): vec2
+
     /** @noSelf **/
     drawCircle( position: vec3, radius: number, thickness: number, color: number ): void
     /** @noSelf **/

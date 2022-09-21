@@ -2,9 +2,19 @@ declare class fs {
     scriptPath: string;
     configPath: string;
 
-    /** @noSelf **/
+    /**
+     * 
+     * @param directoryPath 
+     * @return {boolean} - Whether the folder creation was successful.
+     */
     createFolder( directoryPath: string ): boolean
-    /** @noSelf **/
+    
+    /**
+     * 
+     * @param directoryPath 
+     * @param extension 
+     * @returns {LuaTable} - Table of all files in a directory containing an extension.
+     */
     getFiles( directoryPath: string, extension: string ): LuaTable
 }
 

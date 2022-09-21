@@ -1,9 +1,22 @@
 declare class evade {
     isActive: boolean;
     spells: evadeSkillshot[];
-    /** @noSelf **/
+    
+    /**
+     * 
+     * @param position 
+     * @returns {boolean} - Whether the position is safe
+     */
     isPositionSafe( position: vec3 ): boolean
-    /** @noSelf **/
+    
+    /**
+     * 
+     * @param position 
+     * @param speed 
+     * @param delay 
+     * @param unit 
+     * @returns {boolean} - Whether the path is safe
+     */
     isPathSafe( position: vec3, speed: number, delay: number, unit: aiBaseClient ): boolean
     /** @noSelf **/
     isAboutToHit( time: number, unit: aiBaseClient ): boolean
