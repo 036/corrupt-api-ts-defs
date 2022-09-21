@@ -28,7 +28,7 @@ declare class net {
      * @param fileUrl - url to download .corrupt/.lua from
      * @param callback - Your function, takes a boolean as a param of true/false if updated.
      */
-    autoUpdateDirect(dataUrl: string, fileUrl: string, callback: (updated: boolean) => void): void
+    autoUpdateDirect(dataUrl: string, fileUrl: string, callback?: (updated: boolean) => void): void
 }
 
 declare global {
